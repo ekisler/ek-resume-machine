@@ -21,7 +21,7 @@ const Resume = ({ result }) => {
 
   return (
     <>
-      <button onClick={handlePrint}>Print Page</button>
+      <button onClick={handlePrint}>Imprimir Página</button>
       <main className="container" ref={componentRef}>
         <header className="header">
           <div>
@@ -30,7 +30,7 @@ const Resume = ({ result }) => {
               {result.currentPosition} ({result.currentTechnologies})
             </p>
             <p className="resumeTitle">
-              {result.currentLength}year(s) work experience
+              {result.currentLength} año(s) de Experiencia laboral
             </p>
           </div>
           <div>
@@ -43,7 +43,7 @@ const Resume = ({ result }) => {
         </header>
         <div className="resumeBody">
           <div>
-            <h2 className="resumeBodyTitle">Profile Summary</h2>
+            <h2 className="resumeBodyTitle">Resumen del perfil</h2>
             <p
               dangerouslySetInnerHTML={{
                 __html: replaceWithBr(result.objective),
@@ -52,7 +52,7 @@ const Resume = ({ result }) => {
             />
           </div>
           <div>
-            <h2 className="resumeBodyTitle">Work History</h2>
+            <h2 className="resumeBodyTitle">Historial de Trabajo</h2>
             {result.workHistory.map((work) => (
               <p className="resumeBodyContent" key={work.name}>
                 <span style={{ fontWeight: "bold" }}>{work.name}</span> -{" "}
@@ -61,7 +61,7 @@ const Resume = ({ result }) => {
             ))}
           </div>
           <div>
-            <h2 className="resumeBodyTitle">Job Profile</h2>
+            <h2 className="resumeBodyTitle">Perfil de trabajo</h2>
             <p
               dangerouslySetInnerHTML={{
                 __html: replaceWithBr(result.jobResponsibilities),
@@ -70,7 +70,7 @@ const Resume = ({ result }) => {
             />
           </div>
           <div>
-            <h2 className="resumeBodyTitle">Job Responsibilities</h2>
+            <h2 className="resumeBodyTitle">Responsabilidades laborales</h2>
             <p
               dangerouslySetInnerHTML={{
                 __html: replaceWithBr(result.keypoints),
