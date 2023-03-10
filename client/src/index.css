@@ -13,14 +13,24 @@ form {
   flex-direction: column;
 }
 input {
-  margin-bottom: 15px;
-  padding: 10px 20px;
-  border-radius: 3px;
+  padding: 5px 20px;
+  border-radius: 5px;
   outline: none;
   border: 1px solid #ddd;
 }
+
 h3 {
   margin: 15px 0;
+}
+.firstName {
+  margin-bottom: 40px;
+}
+.titule {
+ margin-top: 40px;
+  margin-bottom: 10px;
+}
+.uploadPhoto {
+  margin-top: 40px;
 }
 button {
   padding: 15px;
@@ -31,15 +41,21 @@ button {
   color: #f5f5f5;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 3px;
 }
+
+ .btn__group {
+  border-radius: 7px;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #867f7fea;
   padding: 30px;
+
 }
 .app > p {
   margin-bottom: 30px;
@@ -54,7 +70,9 @@ button {
   display: flex;
   flex-direction: column;
   width: 39%;
+  margin-bottom: 5%;
 }
+
 .currentInput {
   width: 95%;
 }
@@ -63,10 +81,13 @@ button {
 }
 #addBtn {
   background-color: green;
+  border-radius: 5px;
   margin-right: 5px;
+  
 }
 #deleteBtn {
   background-color: red;
+  border-radius: 5px;
 }
 .container {
   min-height: 100vh;
@@ -108,4 +129,77 @@ button {
 .resumeBodyContent {
   text-align: justify;
   margin-bottom: 30px;
+}
+
+/* --------- */
+/* Navbar */
+/* --------- */
+.navbar {
+  background-color: #060afc;
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important;
+  height: 4em;
+}
+
+/* --------- */
+/* Footer */
+/* --------- */
+.footer {
+  background-color: #060afc;
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important;
+}
+.footer-copywright {
+  text-align: center !important;
+}
+
+.footer-body {
+  z-index: 1;
+  text-align: center !important;
+}
+
+.social-icons {
+  display: flex;
+  float: left;
+  align-items: center;
+  width: 3em;
+}
+
+.red {
+  color: rgb(2, 255, 2);
+}
+
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: center !important;
+  }
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: white !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 0 !important;
+}
+
+.social-icons {
+  display: flex;
+  float: right;
+  align-items: center;
+  width: 3em;
+}
+
+.blockquote-footer {
+  color: #7190b9 !important;
 }

@@ -55,14 +55,14 @@ const Home = ({ setResult }) => {
   return (
     <div className="app">
       <h1>Maquina de Curriculums</h1>
-      <p>Genere un currículum con ChatGPT en unos segundos</p>
+      <p><h6>Genere un currículum con ChatGPT en unos segundos</h6></p>
       <form
         onSubmit={handleFormSubmit}
         method="POST"
         encType="multipart/form-data"
       >
-        <label htmlFor="fullName">Escriba su nombre completo</label>
-        <input
+        <label htmlFor="fullName"><h6>Escriba su nombre completo</h6></label>
+        <input className="firstName" 
           type="text"
           required
           name="fullName"
@@ -72,7 +72,7 @@ const Home = ({ setResult }) => {
         />
         <div className="nestedContainer">
           <div>
-            <label htmlFor="currentPosition">Posición actual</label>
+            <label htmlFor="currentPosition"><h6>Posición actual</h6></label>
             <input
               type="text"
               required
@@ -83,7 +83,7 @@ const Home = ({ setResult }) => {
             />
           </div>
           <div>
-            <label htmlFor="currentLength">¿Por cuánto tiempo? (año (s))</label>
+            <label htmlFor="currentLength"><h6>¿Por cuántos año(s)?</h6></label>
             <input
               type="number"
               required
@@ -94,7 +94,7 @@ const Home = ({ setResult }) => {
             />
           </div>
           <div>
-            <label htmlFor="currentTechnologies">Tecnologías utilizadas</label>
+            <label htmlFor="currentTechnologies"><h6>Tecnologías utilizadas</h6></label>
             <input
               type="text"
               required
@@ -105,7 +105,7 @@ const Home = ({ setResult }) => {
             />
           </div>
         </div>
-        <label htmlFor="photo">Sube tu foto tipo carnet</label>
+        <label className="uploadPhoto" htmlFor="photo"><h5>Sube tu foto tipo carnet</h5></label>
         <input
           type="file"
           name="photo"
@@ -115,12 +115,12 @@ const Home = ({ setResult }) => {
           onChange={(e) => setHeadshot(e.target.files[0])}
         />
 
-        <h3>Empresas para las que ha trabajado</h3>
+        <h3 className="titule">Empresas para las que has trabajado</h3>
 
         {companyInfo.map((company, index) => (
           <div className="nestedContainer" key={index}>
             <div className="companies">
-              <label htmlFor="name">Nombre de la Empresa</label>
+              <label htmlFor="name">Nombre</label>
               <input
                 type="text"
                 name="name"
@@ -129,7 +129,7 @@ const Home = ({ setResult }) => {
               />
             </div>
             <div className="companies">
-              <label htmlFor="position">Cargo que ocupa</label>
+              <label htmlFor="position">Cargo</label>
               <input
                 type="text"
                 name="position"
@@ -138,14 +138,14 @@ const Home = ({ setResult }) => {
               />
             </div>
 
-            <div className="btn__group">
+            <div className="btn__group" >
               {companyInfo.length - 1 === index && companyInfo.length < 4 && (
-                <button id="addBtn" onClick={handleAddCompany}>
+                <button class="btn" id="addBtn" onClick={handleAddCompany}>
                   Agregar
                 </button>
               )}
               {companyInfo.length > 1 && (
-                <button
+                <button class="btn"
                   id="deleteBtn"
                   onClick={() => handleRemoveCompany(index)}
                 >
@@ -156,7 +156,7 @@ const Home = ({ setResult }) => {
           </div>
         ))}
 
-        <button>Crear Curriculum</button>
+        <button className="btn__group">Crear Curriculum</button>
       </form>
     </div>
   );
